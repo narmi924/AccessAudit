@@ -51,21 +51,25 @@ https://sepolia.etherscan.io/address/0xaED732B1F4Dcc0DD062434F0dE4ec1Cf61a3c60E
 * Tx（decide）: `0x7ec60b25d033f73da15d044b22b733770cd482105bcc7d92ab4d5987f6a119b5`
 
 说明 / Note:
-在合约 **未验证** 时，区块浏览器可能只显示函数选择器（method id）而非函数名。
-例如 `decide(uint256,bool)` 的 selector 为：`0x224f3d1a`（你已用 `cast sig` 验证）。
+在合约 **未验证** 时，Etherscan等区块浏览器中只会显示函数选择器（method id）而非函数名。
+例如 `decide(uint256,bool)` 的 selector 为：`0x224f3d1a`。
 验证完成后，Etherscan 会使用 ABI 将其解码为可读方法名与参数。
 
-Before verification, explorers may show only the 4-byte function selector (method id).
+Before verification, explorers show only the 4-byte function selector (method id).
 For example, `decide(uint256,bool)` has selector `0x224f3d1a`. After verification, Etherscan decodes it using ABI.
 
 ---
 
 ### 证据截图 / Proof Screenshots
 
-* `proof/01_contract_address.png`
-* `proof/02_deploy_tx.png`
-* `proof/03_request_tx_logs.png`
-* `proof/04_decide_tx_logs.png`
+* `01_contract_address / 合约地址页面`
+![01_contract_address](https://github.com/narmi924/AccessAudit/blob/adc56656d6c8f1d74728bba1e7b74b013b3425e4/proof/01_contract_address.png?raw=true)
+* `02_deploy_tx / 部署交易页面`
+![02_deploy_tx](https://github.com/narmi924/AccessAudit/blob/adc56656d6c8f1d74728bba1e7b74b013b3425e4/proof/01_contract_address.png?raw=true)
+* `03_request_tx_logs / requestAccess 交易页面`
+![03_request_tx_logs](https://github.com/narmi924/AccessAudit/blob/adc56656d6c8f1d74728bba1e7b74b013b3425e4/proof/01_contract_address.png?raw=true)
+* `04_decide_tx_logs / decide 交易页面`
+![04_decide_tx_logs](https://github.com/narmi924/AccessAudit/blob/adc56656d6c8f1d74728bba1e7b74b013b3425e4/proof/01_contract_address.png?raw=true)
 
 ---
 
@@ -133,23 +137,45 @@ This section reproduces the full flow locally (no external RPC, no test ETH need
 * approved: `true`
 * Tx（decide）: `0x22b592e5b162b5564a14d4147cb4c3faf7e755869ad8bd2a2713fe1cd5777146`
 
----
+## Resources 资源
 
-## Foundry 简介 / Foundry Reference
+### Learning resources（学习资源）
+- Bilibili（视频学习）
+  - 【智能合约｜PKUBA北大区块链协会Web3新人公开课（第4讲）】https://www.bilibili.com/video/BV12v4y1R77o?vd_source=0db291edfed22838b24ac30293ce8db5
+  - 【Web3的审计与安全｜PKUBA北大区块链协会Web3进阶公开课（第2讲）】https://www.bilibili.com/video/BV19vBjYqEYn?vd_source=0db291edfed22838b24ac30293ce8db5
+  - 【【零基础】Solidity快速入门 | 智能合约开发 | Web3案例入门 | 区块链开发 | 加密鲸拓】https://www.bilibili.com/video/BV1S5pqeBEfp?vd_source=0db291edfed22838b24ac30293ce8db5
+  - 【【原创教程】Foundry 入门实战 | 智能合约测试 | Web3单元测试 | 加密鲸拓】https://www.bilibili.com/video/BV1wS1WYoEan?vd_source=0db291edfed22838b24ac30293ce8db5
 
-Foundry 主要组件 / Foundry includes:
+- 系统学习网站：
+  - https://leapwhale.com/article/8r581039
+  - https://leapwhale.com/tag/foundry
+  - https://www.useweb3.xyz
+  - https://cryptozombies.io
 
-* **Forge**: 编译与测试框架 / build & testing framework
-* **Cast**: 与合约交互 / interact with EVM contracts
-* **Anvil**: 本地节点 / local node
-* **Chisel**: Solidity REPL / Solidity REPL
+- Community forums（论坛）
+  - https://ethereum.stackexchange.com
+  - https://ethresear.ch
 
-官方文档 / Docs:
+### Official docs（官方资料）
+- Foundry (install / forge / cast / deploy & verify)
+  - https://getfoundry.sh/
+  - https://book.getfoundry.sh/
+  - https://getfoundry.sh/introduction/installation/
+  - https://getfoundry.sh/forge/deploying/
+- OpenZeppelin Contracts (AccessControl / role-based access control)
+  - https://docs.openzeppelin.com/contracts/5.x/access-control
+- MetaMask (wallet basics + developer docs)
+  - https://docs.metamask.io/
+- Alchemy (Sepolia RPC / JSON-RPC basics)
+  - https://www.alchemy.com/docs
+  - https://www.alchemy.com/chain-connect/chain/sepolia
 
-```text
-https://book.getfoundry.sh/
-```
 
-```
-::contentReference[oaicite:0]{index=0}
-```
+## Tooling used 工具与服务
+
+- Wallet: MetaMask (testnet accounts only)
+- RPC provider: Alchemy (Sepolia)
+- Block explorer / verification: Etherscan (Sepolia)
+- Language/toolchain: Solidity + Foundry (forge/cast/anvil)
+- Libraries: OpenZeppelin Contracts (AccessControl)
+
