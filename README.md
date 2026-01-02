@@ -137,22 +137,22 @@ This section reproduces the full flow locally (no external RPC, no test ETH need
 * approved: `true`
 * Tx（decide）: `0x22b592e5b162b5564a14d4147cb4c3faf7e755869ad8bd2a2713fe1cd5777146`
 
-## Resources 资源
+## Resources / 使用的资源
 
-### Learning resources（学习资源）
-- Bilibili（视频学习）
+### Learning resources / 学习资源
+- Bilibili Tutorial Vids/ 学习的视频
   - 【智能合约｜PKUBA北大区块链协会Web3新人公开课（第4讲）】https://www.bilibili.com/video/BV12v4y1R77o?vd_source=0db291edfed22838b24ac30293ce8db5
   - 【Web3的审计与安全｜PKUBA北大区块链协会Web3进阶公开课（第2讲）】https://www.bilibili.com/video/BV19vBjYqEYn?vd_source=0db291edfed22838b24ac30293ce8db5
   - 【【零基础】Solidity快速入门 | 智能合约开发 | Web3案例入门 | 区块链开发 | 加密鲸拓】https://www.bilibili.com/video/BV1S5pqeBEfp?vd_source=0db291edfed22838b24ac30293ce8db5
   - 【【原创教程】Foundry 入门实战 | 智能合约测试 | Web3单元测试 | 加密鲸拓】https://www.bilibili.com/video/BV1wS1WYoEan?vd_source=0db291edfed22838b24ac30293ce8db5
 
-- 系统学习网站：
+- Tutorial website / 教程网站：
   - https://leapwhale.com/article/8r581039
   - https://leapwhale.com/tag/foundry
   - https://www.useweb3.xyz
   - https://cryptozombies.io
 
-- Community forums（论坛）
+- Community forums / 参考的论坛
   - https://ethereum.stackexchange.com
   - https://ethresear.ch
 
